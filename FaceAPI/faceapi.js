@@ -35,6 +35,7 @@ function analyseImage(){
         return Promise.reject(new Error(response.statusText));
       }
     }).then(function(val){
+      console.log(val);
        document.getElementById('imageAttributes').innerHTML = "Age: " + val[0].faceAttributes.age + "</br>"
             + "Gender: " + val[0].faceAttributes.gender;
     }).catch(function(val){
